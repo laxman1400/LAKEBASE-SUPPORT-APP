@@ -1,0 +1,16 @@
+command: ['streamlit', 'run', 'app.py']
+env:
+  # Add the lakebase-url secret to App resources with this custom resource key.
+  - name: LAKEBASE_URL
+    valueFrom: lakebase_url_secret
+
+  # Add the massive-api-key secret to App resources with this custom resource key.
+  - name: MASSIVE_API_KEY
+    valueFrom: massive_api_key_secret
+
+  - name: MASSIVE_API_BASE_URL
+    value: https://api.massive.com
+  - name: SUPPORT_SCHEMA
+    value: support_app
+  - name: STREAMLIT_GATHER_USAGE_STATS
+    value: 'false'
