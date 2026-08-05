@@ -1,8 +1,0 @@
-command: ['streamlit', 'run', 'app.py']
-env:
-  # The Databricks App resource must use the key "postgres".
-  # For Lakebase Autoscaling, valueFrom resolves to the endpoint resource path.
-  - name: ENDPOINT_NAME
-    valueFrom: postgres
-  - name: SUPPORT_SCHEMA
-    value: support_app
